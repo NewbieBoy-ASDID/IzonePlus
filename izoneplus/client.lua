@@ -180,6 +180,7 @@ function HelpPromt(text)
   DisplayHelpTextFromStringLabel(0, false, false, -1)
 
 end
+--Here i add a function with parameters for disarm players
 function Desarmar()
   DisableControlAction(2, 37, true) -- disable weapon wheel (Tab)
   DisablePlayerFiring(player,true) -- Disables firing all together if they somehow bypass inzone Mouse Disable
@@ -261,6 +262,7 @@ AddEventHandler("izone:isPlayerInZone", function(zone, cb)
       end
     end
   end)
+--added copy of isPlayerInZone, for test "Desarmar" function
 AddEventHandler("izone:isPlayerInZoneSegura", function(zone, cb, desarmar)
     local found = FindZone(zone)
     if not found then
